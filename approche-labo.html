@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notre approche | Bioptim</title>
+  <meta name="description" content="Bioptim : rendre les résultats biologiques lisibles, contextualisés et utiles dans le parcours de soins.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER injecté -->
+  <div id="header-labo"></div>
+
+  <script>
+    fetch("header-labo.html")
+      .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById("header-labo").innerHTML = data;
+      })
+      .catch(err => console.error("Erreur header-labo:", err));
+  </script>
+
+  <main>
+
+    <!-- HERO -->
+<section class="page-title">
+  <div class="section-inner hero-split">
+
+    <!-- TEXTE -->
+    <div class="hero-text">
+      <span class="eyebrow">Notre approche</span>
+
+      <h1>Rendre la biologie médicale plus lisible</h1>
+
+      <p class="lead">
+        Bioptim aide à rendre les résultats biologiques plus compréhensibles grâce à une interprétation pédagogique fondée sur l'expertise du biologiste médical
+      </p>
+    </div>
+
+    <!-- IMAGE (droite) -->
+    <div class="hero-image">
+      <img src="assets/Notre approche.png" alt="Laboratoire de biologie médicale Bioptim">
+    </div>
+
+  </div>
+</section>
+
+    <!-- PROBLEME -->
+    <section>
+      <div class="section-inner split">
+
+        <div>
+          <h2>Un problème fréquent dans la biologie médicale</h2>
+          <p class="lead">
+            Les comptes rendus biologiques contiennent de nombreuses informations médicales souvent difficiles à interpréter sans accompagnement.
+            Ils sont souvent difficiles à interpréter sans contexte clinique, ce qui peut générer incompréhension et interrogations.
+          </p>
+        </div>
+
+        <div class="callout">
+          Le délai entre la réception du résultat et la consultation médicale peut amplifier ces difficultés d’interprétation.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOLUTION / APPROCHE -->
+    <section class="section-muted">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <div>
+            <h2>Notre approche</h2>
+            <p>Une méthode structurée basée sur l’expertise du biologiste médical.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+
+          <article class="card">
+            <div class="icon">1</div>
+            <h3>Expertise médicale</h3>
+            <p>
+Chaque contenu repose sur l'interprétation du biologiste médical et les référentiels du laboratoire.            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">2</div>
+            <h3>Vision globale</h3>
+            <p>
+              Les résultats sont expliqués dans leur ensemble plutôt qu'analyse par analyse.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">3</div>
+            <h3>Pédagogie</h3>
+            <p>
+              Les données médicales sont traduites en informations accessibles au plus grand nombre.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+<!-- BENEFICES -->
+<section>
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <h2>Ce que cela permet</h2>
+      <p>Un meilleur usage de l’information biologique par le patient et le professionnel de santé.</p>
+    </div>
+
+    <div class="grid grid-3">
+
+      <div class="card">
+        <h3>Pour le patient</h3>
+        <ul>
+          <li>Compréhension améliorée des résultats</li>
+          <li>Réduction des interprétations erronées</li>
+          <li>Meilleure préparation à la consultation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Pour les professionnels de santé</h3>
+        <ul>
+          <li>Lecture plus fluide des comptes rendus</li>
+          <li>Moins de confusion en amont de la consultation</li>
+          <li>Échange médical plus efficace</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Pour le laboratoire</h3>
+        <ul>
+          <li>Valorisation de l’expertise du biologiste médical</li>
+          <li>Réduction des incompréhensions patients</li>
+          <li>Meilleure continuité entre analyse et interprétation</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    <!-- POSITIONNEMENT FINAL -->
+    <section>
+      <div class="section-inner">
+
+        <div class="callout">
+          Bioptim ne remplace ni le biologiste médical ni le médecin prescripteur. Il facilite la compréhension des résultats biologiques afin de rendre l'information plus accessible au patient.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+ <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(r => r.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

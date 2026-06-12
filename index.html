@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bioptim | Solution d'interprétation pédagogique pour laboratoires</title>
+  <meta name="description" content="Bioptim est une couche pédagogique intégrée aux comptes rendus biologiques, permettant aux laboratoires d'améliorer la compréhension des résultats via QR code.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="header-labo"></div>
+
+  <script>
+    fetch("header-labo.html")
+      .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById("header-labo").innerHTML = data;
+      })
+      .catch(err => console.error("Erreur header:", err));
+  </script>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+
+        <!-- Colonne texte -->
+        <div>
+          <span class="eyebrow">Solution pour laboratoires de biologie médicale</span>
+
+          <h1>Clarifiez la lecture des résultats biologiques de vos patients.</h1>
+
+          <p class="lead">
+            Sous la supervision du Dr Bokobza, biologiste médical, Bioptim propose une interprétation simplifiée pour faciliter la lecture. Bioptim s'intègre aux pratiques existantes du laboratoire sans modifier la production des comptes rendus.
+          </p>
+
+          <div class="hero-highlights">
+            <div>✔ Valorisation de l'expérience patient</div>
+            <div>✔ Intégration simple via QR code</div>
+            <div>✔ Lecture pédagogique structurée</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#fonctionnement">Demander une démonstration</a>
+            <a class="button button-secondary" href="patient.html">Voir un exemple</a>
+          </div>
+        </div>
+
+        <!-- Colonne image -->
+        <div class="hero-img-wrap">
+          <img src="assets/CR exemple.png"
+               alt="Interprétation biologique Bioptim">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- POURQUOI -->
+    <section>
+      <div class="section-inner split">
+        <div>
+          <h2>Pourquoi les laboratoires utilisent Bioptim ?</h2>
+          <p class="lead">
+            Les comptes rendus biologiques sont riches en informations médicales et parfois difficiles à interpréter pour les patients. De plus, un délai parfois long existe entre la disponibilité des résultats et la consultation médicale.
+          </p>
+        </div>
+
+        <div class="callout">
+          Bioptim apporte une interprétation pédagogique standardisée permettant de renforcer la clarté des résultats tout en respectant le cadre médical du laboratoire.
+        </div>
+      </div>
+    </section>
+
+    <!-- FONCTIONNEMENT -->
+    <section id="fonctionnement" class="section-muted">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <div>
+            <h2>Comment ça fonctionne ?</h2>
+            <p>Une intégration simple compatible avec les workflows des laboratoires.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card"><div class="step-number">Étape 1</div><h3>Le laboratoire valide ses résultats.</h3></article>
+          <article class="card"><div class="step-number">Étape 2</div><h3>Un QR code est ajouté au compte rendu.</h3></article>
+          <article class="card"><div class="step-number">Étape 3</div><h3>Le patient accède à Bioptim.</h3></article>
+          <article class="card"><div class="step-number">Étape 4</div><h3>Lecture pédagogique des résultats.</h3></article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AVANT / APRÈS — dans section-inner pour être bien centré -->
+    <section>
+      <div class="section-inner">
+        <article class="card ba-mini">
+
+          <h3>Avant / Après Bioptim</h3>
+
+          <div class="ba-mini-row">
+
+            <!-- AVANT -->
+            <div class="ba-mini-block before-mini">
+              <div class="ba-mini-title">Avant (compte rendu brut)</div>
+              <div class="ba-mini-text">
+                Ferritine : 12 ng/mL (N : 30–300) ↓<br>
+                CRP : 6 mg/L (N &lt; 5)<br>
+                Hémoglobine : 11,8 g/dL
+              </div>
+              <div class="ba-mini-text ba-mini-note">
+                Le patient voit uniquement des valeurs chiffrées sans interprétation immédiate.
+              </div>
+            </div>
+
+            <!-- APRÈS -->
+            <div class="ba-mini-block after-mini">
+              <div class="ba-mini-title">Avec Bioptim (lecture pédagogique)</div>
+              <div class="ba-mini-text">
+                🔎 Ferritine basse : réserve en fer diminuée, compatible avec une carence martiale.<br>
+                🧬 CRP normale : pas de signe biologique d'inflammation significative.<br>
+                🩸 Hémoglobine légèrement basse : à corréler cliniquement.
+              </div>
+              <div class="ba-mini-text ba-mini-conclusion">
+                → Lecture structurée permettant une compréhension immédiate avant consultation médicale.
+              </div>
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(r => r.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

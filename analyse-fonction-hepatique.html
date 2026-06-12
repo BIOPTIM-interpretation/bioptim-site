@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonction hepatique | Bioptim</title>
+  <meta name="description" content="Comprendre transaminases, GGT et bilirubine.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER injecté -->
+  <div id="header"></div>
+
+  <script>
+    fetch("/header.html")
+      .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(err => console.error("Erreur header:", err));
+  </script>
+
+  <main>
+
+    <section class="page-title">
+      <div class="section-inner">
+        <span class="hero-eyebrow">Fiche analyse</span>
+        <h1>Fonction hepatique</h1>
+        <p class="lead">
+          Le bilan hepatique explore certains signaux lies au foie et aux voies biliaires.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner grid grid-2">
+
+        <article class="card">
+          <h2>Definition</h2>
+          <p>Ces analyses evaluent des enzymes et pigments associes au fonctionnement hepatique.</p>
+        </article>
+
+        <article class="card">
+          <h2>Parametres concernes</h2>
+          <p>ALAT, ASAT, GGT, phosphatases alcalines, bilirubine, albumine selon bilan.</p>
+        </article>
+
+        <article class="card">
+          <h2>Role biologique</h2>
+          <p>Le foie participe au metabolisme, a la detoxication, a la digestion et a la synthese de proteines.</p>
+        </article>
+
+        <article class="card">
+          <h2>Exemples simples</h2>
+          <p>Des transaminases augmentees indiquent un signal a interpreter avec le contexte, les medicaments et les autres marqueurs.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="section-inner">
+
+        <h2>FAQ</h2>
+
+        <div class="accordion">
+
+          <div class="accordion-item open">
+            <button aria-expanded="true">
+              Une GGT elevee signifie-t-elle toujours une maladie grave ?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Non. La GGT peut etre influencee par plusieurs facteurs et doit etre interpretee avec les autres resultats.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              Pourquoi comparer ALAT et ASAT ?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Leur profil relatif peut orienter la lecture biologique, sans suffire a poser un diagnostic.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(r => r.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

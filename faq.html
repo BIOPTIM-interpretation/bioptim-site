@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ | Bioptim</title>
+  <meta name="description" content="Questions frequentes sur Bioptim, l'acces patient et la protection des donnees.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER injecté -->
+  <div id="header"></div>
+
+  <script>
+    fetch("/header.html")
+      .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(err => console.error("Erreur header:", err));
+  </script>
+
+  <main>
+
+    <section class="page-title">
+      <div class="section-inner">
+        <span class="eyebrow">FAQ</span>
+        <h1>Questions frequentes</h1>
+        <p class="lead">
+          Les reponses essentielles pour comprendre le role et les limites de Bioptim.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+
+        <div class="accordion">
+
+          <div class="accordion-item open">
+            <button aria-expanded="true">
+              Bioptim remplace-t-il l'avis de mon médecin ?<span>+</span>
+            </button>
+            <div class="accordion-panel">
+              NNon. Bioptim fournit une interprétation pédagogique destinée à faciliter la compréhension des résultats biologiques. Seul votre médecin peut interpréter ces résultats dans leur contexte clinique complet.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button aria-expanded="false">
+             Les interprétations sont-elles rédigées par une intelligence artificielle ?<span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Les contenus reposent sur des règles d'interprétation validées sous la supervision d'un biologiste médical. Ils ont pour objectif d'expliquer les résultats de manière claire et accessible.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button aria-expanded="false">
+             Pourquoi certains résultats ne sont-ils pas expliqués ?<span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Toutes les analyses ne se prêtent pas à une interprétation pédagogique standardisée. Certaines nécessitent un contexte clinique ou des informations médicales complémentaires. Pour interprétations complémetaitaires vous pouvez me contacter via le formulaire de contact.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              Comment acceder a mon espace ?<span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Le patient scanne le QR code present sur son compte rendu ou saisit son numero d'acces dans l'espace patient Bioptim.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark">B</span>Bioptim
+        </a>
+        <p>Questions frequentes sur Bioptim.</p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Informations</strong>
+        <a href="mentions-legales.html">Mentions legales</a>
+        <a href="confidentialite.html">Politique de confidentialite</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Contact</strong>
+        <a href="mailto:contact@bioptim.fr">contact@bioptim.fr</a>
+        <a href="contact.html">Formulaire de contact</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

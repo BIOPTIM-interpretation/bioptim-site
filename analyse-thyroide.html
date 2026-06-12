@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thyroide | Bioptim</title>
+  <meta name="description" content="Comprendre TSH, T4 libre et fonction thyroidienne.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER injecté -->
+  <div id="header"></div>
+
+  <script>
+    fetch("/header.html")
+      .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(err => console.error("Erreur header:", err));
+  </script>
+
+  <main>
+
+    <section class="page-title">
+      <div class="section-inner">
+        <span class="hero-eyebrow">Fiche analyse</span>
+        <h1>Thyroide</h1>
+        <p class="lead">
+          La thyroide participe a la regulation de l'energie, du rythme cardiaque, du poids et de la temperature corporelle.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner grid grid-2">
+
+        <article class="card">
+          <h2>Definition</h2>
+          <p>Le bilan thyroidien explore la regulation hormonale entre le cerveau et la glande thyroide.</p>
+        </article>
+
+        <article class="card">
+          <h2>Parametres concernes</h2>
+          <p>TSH, T4 libre, T3 libre selon contexte, anticorps anti-TPO ou anti-recepteur de la TSH.</p>
+        </article>
+
+        <article class="card">
+          <h2>Role biologique</h2>
+          <p>Les hormones thyroidiennes modulent de nombreuses fonctions du corps, notamment le metabolisme.</p>
+        </article>
+
+        <article class="card">
+          <h2>Exemples simples</h2>
+          <p>Une TSH elevee peut orienter vers une thyroide qui fonctionne trop peu, selon le niveau de T4 libre.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="section-inner">
+
+        <h2>FAQ</h2>
+
+        <div class="accordion">
+
+          <div class="accordion-item open">
+            <button aria-expanded="true">
+              Pourquoi la TSH est-elle souvent demandee en premier ?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Elle est sensible aux variations de la fonction thyroidienne et guide souvent la suite de l'exploration.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              Les symptomes suffisent-ils a conclure ?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              Non. Les symptomes sont importants mais doivent etre croises avec les resultats biologiques.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(r => r.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
